@@ -6,28 +6,7 @@
     <title>barcode</title>
   </head>
   <body>
-    <div id="app">
-      <div>
-        <input type="text" id="barcode-input" />
-        <input type="number" value="48" id="height" />
-      </div>
-      <div>
-        <button id="save">save to jpg</button>
-      </div>
-
-      <hr/>
-
-      <div>
-        <div>
-          <h2>EAN-13(JAN)</h2>
-          <svg id="ean13"></svg>
-        </div>
-        <div>
-          <h2>CODE-128</h2>
-          <svg id="code128"></svg>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="barcode-app"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

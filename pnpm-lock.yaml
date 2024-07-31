@@ -20,7 +20,22 @@ importers:
       jsbarcode:
         specifier: ^3.11.6
         version: 3.11.6
+      react:
+        specifier: ^17.0.0 || ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^17.0.0 || ^18.0.0
+        version: 18.3.1(react@18.3.1)
+      react-jsbarcode:
+        specifier: ^1.0.1
+        version: 1.0.1(react@18.3.1)
     devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
       typescript:
         specifier: ^5.2.2
         version: 5.5.4
@@ -454,6 +469,9 @@ packages:
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
 
+  '@types/react-dom@18.3.0':
+    resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
+
   '@types/react-transition-group@4.4.10':
     resolution: {integrity: sha512-hT/+s0VQs2ojCX823m60m5f0sL5idt9SO6Tj6Dg+rdphGPIeJbJ6CxvBYkgkGKrYeDjvIpKTR38UzmtHJOGW3Q==}
 
@@ -629,6 +647,11 @@ packages:
 
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
+
+  react-jsbarcode@1.0.1:
+    resolution: {integrity: sha512-M6Z8M2y3/re4dE8FUhWUO/DWk4Mmo4CfOu34JnncYR0NHS8Q9kJQwzHCyEXJ8HnK2EwR5NWayG7n7bWhHXB2tA==}
+    peerDependencies:
+      react: '>=17 <=18'
 
   react-transition-group@4.4.5:
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
@@ -1083,6 +1106,10 @@ snapshots:
 
   '@types/prop-types@15.7.12': {}
 
+  '@types/react-dom@18.3.0':
+    dependencies:
+      '@types/react': 18.3.3
+
   '@types/react-transition-group@4.4.10':
     dependencies:
       '@types/react': 18.3.3
@@ -1261,6 +1288,11 @@ snapshots:
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
+
+  react-jsbarcode@1.0.1(react@18.3.1):
+    dependencies:
+      jsbarcode: 3.11.6
+      react: 18.3.1
 
   react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
