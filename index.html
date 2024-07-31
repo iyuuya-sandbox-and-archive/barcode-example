@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>barcode</title>
+  </head>
+  <body>
+    <div id="app">
+      <div style="display: flex">
+        <div style="margin-left: 8px">
+          <h2>EAN-13(JAN)</h2>
+          <svg id="ean13"></svg>
+        </div>
+        <div>
+          <h2>CODE-128</h2>
+          <svg id="code128"></svg>
+        </div>
+      </div>
+      <div>
+        <input type="text" id="barcode-input" />
+        <input type="number" value="32" id="height" />
+      </div>
+      <div>
+        <button id="save">save to jpg</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
