@@ -36,7 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const save = document.getElementById("save") as HTMLButtonElement;
   save.addEventListener("click", () => {
-    const barcode = document.getElementById("barcode") as SVGElement;
+    const barel = document.getElementById("barcode");
+    if (barel === null) return;
+
+    const barcode = barel as unknown as SVGGraphicsElement;
+
     const svgData = new XMLSerializer().serializeToString(barcode);
 
     const canvas = document.createElement("canvas");
@@ -44,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.height = barcode.getBBox().height;
 
     const ctx = canvas.getContext("2d");
+    if (ctx === null) return;
+
     const image = new Image();
     image.onload = function () {
       ctx.drawImage(image, 0, 0);
